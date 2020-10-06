@@ -1,0 +1,304 @@
+@font-face { /* Police Titre Principal */
+    font-family: 'freebooter_scriptregular';
+    src: url('font/freebooterscript-webfont.eot') format('eot');
+    src: url('font/freebooterscript-webfont.eot?#iefix') format('embedded-opentype'),
+         url('font/freebooterscript-webfont.woff2') format('woff2'),
+         url('font/freebooterscript-webfont.woff') format('woff'),
+         url('font/freebooterscript-webfont.ttf') format('truetype'),
+         url('font/freebooterscript-webfont.svg#freebooter_scriptregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+@font-face { /* Police générale */
+    font-family: 'latin_modern_roman_slante10Rg';
+    src: url('font/roman/lmromanslant10-regular-webfont.eot');
+    src: url('font/roman/lmromanslant10-regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('font/roman/lmromanslant10-regular-webfont.woff2') format('woff2'),
+         url('font/roman/lmromanslant10-regular-webfont.woff') format('woff'),
+         url('font/roman/lmromanslant10-regular-webfont.ttf') format('truetype'),
+         url('font/roman/lmromanslant10-regular-webfont.svg#latin_modern_roman_slante10Rg') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+body
+{
+    font-family: 'latin_modern_roman_slante10Rg';
+    background-image: url('images/parch.jpg');
+    background-size: cover;
+    background-position: center;
+    color: white;
+}
+h1
+{
+    color: white;
+    font-size: 48px;
+    margin-bottom: 0px;
+    font-family: 'freebooter_scriptregular';
+    text-shadow: 2px 2px 4px black;
+}
+a[href="index.php"]
+{
+    border-radius: 8px;
+    background: #092033;
+    border-bottom: 3px solid #d0ced3;
+    width: 150px;
+    text-decoration: none;
+    color: white;
+    font-size: 21px;
+    padding: 3px;
+    font-family: 'freebooter_scriptregular';
+    display: flex;
+}
+a[href="index.php"]:hover
+{
+    background: white;
+    color: #092033;
+    border-bottom: 3px solid  #092033;
+}
+h2
+{
+    margin-top: -6px;
+    font-size: 25px;
+    margin-left: 11%;
+    font-family: 'freebooter_scriptregular';
+    color: #f8f6f9;
+    font-style: oblique;
+    text-shadow: 2px 2px 4px black;
+}
+.bloc_news
+{
+    width: 96%;
+    text-align: center;
+}
+h3
+{
+    color: #f8f6f9;
+    font-size: 2.0em;
+    margin-bottom: 0px;
+    border-radius: 10px;
+    font-family: 'freebooter_scriptregular';
+    text-align: center;
+    padding: 5%;
+}
+.art
+{
+    background-color: #013d6f91;
+    color: #f8f6f9;
+    font-size: 18px;
+    margin-bottom: 3%;
+    border-radius: 0%;
+    margin-left: 3%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    border-top-right-radius: 2%;
+    border-top-left-radius: 2%;
+}
+header
+{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    margin: 1%;
+}
+.btnArt 
+{
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-family: 'latin_modern_roman_slante10Rg';
+    border: none;
+    background: none;
+    padding-bottom: 2%;
+    margin: auto;
+}
+.btnArt:hover
+{
+    color: #041725;
+    text-decoration: none;
+}
+.spaceCom
+{
+    color: #a1948e;
+    font-family: 'latin_modern_roman_slante10Rg';
+    background-color: #163e61eb;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-size: 17px;
+    margin-bottom: 15px;
+    border-radius: 5%;
+    box-shadow: 0 0 11px 9px #fdfcfc;
+    text-align: center;
+}
+.spaceCom h2
+{
+    color: #a1948e;
+    font-size: 30px;
+    text-shadow: 2px 2px 4px #dee2e663;
+    margin-left: 0;
+}
+.form-control-sm
+{
+    width: 70%;
+}
+.form-control-md
+{
+    width: 88%;
+}
+.comZone
+{
+    background-color: #163e6175;
+    color: white;
+}
+input[type=submit]
+{
+    border-radius: 8px;
+    background: #a1948ed1;
+    border-bottom: 3px solid #d0ced3;
+    padding-bottom: 4px;
+    text-decoration: none;
+    color: white;
+    font-size: 17px;
+    padding-top: 4px;
+    font-family: 'latin_modern_roman_slante10Rg';
+}
+input[type=submit]:hover
+{
+    color: #041725;
+}
+.addCom
+{
+    margin: auto;
+}
+.dropdown
+{
+    text-align: right;
+    border-radius: 8px;
+    background: #092033;
+    border-bottom: 3px solid #d0ced3;
+    width: 150px;
+    text-decoration: none;
+    color: white;
+    font-size: 21px;
+    padding: 3px;
+    font-family: 'freebooter_scriptregular';
+
+}
+.dropdown-toggle
+{
+    width: 100%;
+    color: white;
+}
+.dropdown-toggle:hover
+{
+    width: 100%;
+    color: white;
+}
+.conecForm
+{
+    margin: auto;
+    color: #a1948e;
+    font-family: 'latin_modern_roman_slante10Rg';
+    background-color: #1a3b6694;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-size: 17px;
+    margin-bottom: 15px;
+    border-radius: 5%;
+    box-shadow: 0 0 11px 9px #fdfcfc;
+    text-align: center;
+
+}
+h4
+{
+    font-family: 'freebooter_scriptregular';
+    font-size: 35px;
+    text-shadow: 2px 6px 4px black;
+    text-align: center;
+}
+.nav_tab
+{
+    text-align: center;
+    margin: auto;
+}
+.nav-link
+{
+    border-radius: 8px;
+    background: #092033;
+    border-bottom: 3px solid #d0ced3;
+    /*width: 401px; */
+    text-decoration: none;
+    color: white;
+    font-size: 21px;
+    padding: 11px;
+    font-family: 'freebooter_scriptregular';
+    margin: auto;
+    text-align: center;
+}
+/* Page voir les Articles */
+.tabVoirArt
+{
+    background-color: wheat;
+}
+tr 
+{
+    text-align: center;
+}
+/* Page voir les articles */
+.ajouter
+{
+    background-color: #bbbbbdcf;
+    margin: auto;
+    text-align: center;
+    height: 100%;
+    padding: 20px;
+    font-size: 25px;
+    color: black;
+}
+.txtArt
+{
+    height: 250px;
+}
+.titleArt
+{
+    font-size: 20px;
+}
+#addArt h2{
+    margin: 0;
+    font-size: 45px;
+    color: black;
+}
+
+/* Gestion des coms */
+#report
+{       
+    border: none;
+    background: none;
+    cursor: pointer;
+    margin: 0;
+    padding: 0;
+    color: red;
+}
+hr
+{
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    border: 0;
+    border-top: 1px solid #d0ced3;
+}
+.report
+{
+    color: blueviolet;
+    font-size: 20px;
+    font-weight: bolder;
+}
+.tabVoirCom
+{
+    font-size: 20px;
+}
+.delete
+{
+    color: orangered;
+}
