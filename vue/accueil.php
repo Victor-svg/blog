@@ -1,10 +1,10 @@
 <?php $title = 'Mon blog'; ?>
-
 <?php ob_start(); ?>
+
 <header>
-<?php require('vue/menu.php'); ?>
     <h1>Blog de Jean Forteroche</h1>
     <h2>Billet simple pour l'Alaska</h2>
+	<?php require('vue/menu.php'); ?>
 </header>
 <section>
 	<div class="container">

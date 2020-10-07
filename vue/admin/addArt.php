@@ -40,7 +40,7 @@
                 <label for="texte">Texte de l'article</label><br />
                 <textarea id="texte_article" class="txtArt form-control-md" name="texte_article"  placeholder="Votre texte"></textarea>
             </div>
-                <input type="submit" />
+                <input type="submit" onclick="return confirm('Confimer l\'envoi ?')"/>
             </div>
         </form>
     </div>

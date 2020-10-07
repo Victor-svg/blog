@@ -7,7 +7,8 @@ function connect($email, $pass) {
         require('vue/admin.php');
     }
     else {
-        echo 'mauvais identifiant ou mot de passe';
+      ?> <script>alert ('mauvais identifiant ou mot de passe'); </script> <?php
+       require('vue/connexion.php');
     }
 }
 // deconnexion
@@ -20,7 +21,7 @@ function addPost($idArticle, $titre, $texte)
     $add = addArticle($idArticle, $titre, $texte);
 
     if ($add === false) {
-        die("Impossible d'ajouter l'article !");
+        throw new Exception("Impossible d'ajouter l'article !");
     }
     else {
         header('Location: index.php?action=voirArt.php');
@@ -32,7 +33,7 @@ function modifArt($idArticle, $titre, $texte)
     $modifLines = modArt($idArticle, $titre, $texte);
 
     if ($modifLines === false) {
-        die("Impossible de modifier l'article !");
+        throw new Exception("Impossible de modifier l'article !");
     }
     else {
         header('Location: index.php?action=post&id=' . $idArticle);
@@ -43,10 +44,10 @@ function deletArt()
 {
     $delet = deletArticle($_GET['id']);
     if ($delet === false) {
-        die('Impossible de supprimer cet Article !');
+        throw new Exception('Impossible de supprimer cet Article !');
     }
     else {
-        echo "Article supprimé !";
+       echo "Article supprimé !";
         header('Location: index.php?action=voirArt.php');
     }
 }
@@ -55,7 +56,7 @@ function deletCom()
 {
     $delet = deletComment($_GET['id']);
     if ($delet === false) {
-        die('Impossible de supprimer ce commentaire !');
+        throw new Exception('Impossible de supprimer ce commentaire !');
     }
     else {
         echo "Commentaire supprimé !";
@@ -68,9 +69,10 @@ function addReport($id)
     $addRep = reportCom($_GET['id']);
 
     if ($addRep === false) {
-        die('Impossible de signaler !');
+        throw new Exception('Impossible de signaler !');
     }
     else {
-        echo "Commentaire bien signalé !";
+        header('Location: http://localhost/blog_%C3%A9crivain/index.php?');
+        exit();      
     }
 }
