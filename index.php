@@ -72,8 +72,6 @@ if (isset($_GET['action'])) {
             echo "vous n'avez pas la permission !";
         }
     }
-
-
     // Page Admin Voir les Articles
     elseif ($_GET['action'] == 'voirArt.php') {
         if (isset($_SESSION['id']) AND isset($_SESSION['pseudo']))
@@ -155,11 +153,14 @@ if (isset($_GET['action'])) {
             echo 'Commentaire introuvable';
         }
     }
-    else if ($_GET['action'] == 'deco') {
-        $_SESSION = array();
-        session_destroy();
+    // deconnexion 
+    elseif ($_GET['action'] == 'deco') {
+        if (isset($_SESSION['id']) AND isset($_SESSION['pseudo'])) {
+            deco();
+        header('Location: http://localhost/blog_%C3%A9crivain/index.php?');
+        exit();
+        }
     }
-
 }
 else {
     listPosts();

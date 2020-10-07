@@ -10,6 +10,10 @@ function connect($email, $pass) {
         echo 'mauvais identifiant ou mot de passe';
     }
 }
+// deconnexion
+function deco() {
+    $deco = destroy();
+}
 // Ajouter un Article
 function addPost($idArticle, $titre, $texte)
 {
