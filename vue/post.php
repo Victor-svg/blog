@@ -27,7 +27,7 @@
             <label for="contenu">Commentaire</label><br />
             <textarea id="contenu" class="form-control-md" name="contenu"></textarea>
         </div>
-            <input type="submit" />
+            <input type="submit" onclick="return confirm('Publier ?')"/>
         </div>
     </form>
 </div>
@@ -40,7 +40,7 @@
     ?>
         <p><strong><?= htmlspecialchars($comment['auteur']) ?></strong> le <?= $comment['date_creation_fr'] ?> </p>
         <form action="index.php?action=addReport&amp;id=<?= $commentId ?>" method="post">
-            <button type="submit" id="report">  <i class="fas fa-ban"></i> </button>
+            <button type="submit" id="report" onclick="return confirm('Signaler ce commentaire ?')">  <i class="fas fa-ban"></i> </button>
         </form>
         <p>
             <?= nl2br(htmlspecialchars($comment['contenu'])) ?> 

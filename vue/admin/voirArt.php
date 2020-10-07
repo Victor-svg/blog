@@ -26,7 +26,7 @@
             <td>  
               <?= $data['title']; ?> 
               <a href="index.php?action=vueModif&amp;id=<?= $data['id'] ?>" class="modif"><i class="far fa-edit"></i>Modifier</a>
-              <a href="index.php?action=deleteArt&amp;id=<?= $data['id'] ?>" class="delete"><i class="fas fa-trash-alt"></i>Supprimer</a>    
+              <a href="index.php?action=deleteArt&amp;id=<?= $data['id'] ?>" onclick="return confirm('Confimer la suppression ?')" class="delete"><i class="fas fa-trash-alt"></i>Supprimer</a>    
             </td>
             <td> 
               <?= $data['text']; ?>

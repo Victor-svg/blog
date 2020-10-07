@@ -28,7 +28,7 @@
             <td> <?= nl2br(htmlspecialchars($comment['contenu'])) ?>       </td>
             <td> Le: <?= $comment['date_creation_fr']; ?>  </td>
             <td class="report"> <?= $comment['report']; ?> 
-            <a href="index.php?action=deleteCom&amp;id=<?= $comment['id'] ?>" class="delete"><i class="fas fa-trash-alt"></i></a> 
+            <a href="index.php?action=deleteCom&amp;id=<?= $comment['id'] ?>" onclick="return confirm('Confimer la suppression ?')" class="delete"><i class="fas fa-trash-alt"></i></a> 
             </td>
           </tr>
 <?php

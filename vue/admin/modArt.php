@@ -42,7 +42,7 @@
                 <?= $post['text']; ?>
                 </textarea>
             </div>
-                <input type="submit" />
+                <input type="submit" onclick="return confirm('Envoyer les modifications ?')"/>
             </div>
         </form>
     </div>

@@ -22,7 +22,7 @@ function addComment($idArticle, $auteur, $contenu)
     $affectedLines = postComment($idArticle, $auteur, $contenu);
 
     if ($affectedLines === false) {
-        die('Impossible d\'ajouter le commentaire !');
+        throw new Exception('Impossible d\'ajouter le commentaire !');
     }
     else {
         header('Location: index.php?action=post&id=' . $idArticle);
