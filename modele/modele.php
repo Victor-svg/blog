@@ -78,6 +78,11 @@ function getUser($email, $pass)
         return false;
     }
 }
+// fonction deconnexion
+function destroy()
+{
+    session_destroy();
+}
 // fonction pour ajouter un article
 function addArticle($idArticle, $titre, $texte)
 {
@@ -97,8 +102,6 @@ function modArt($idArticle, $titre, $texte)
        'nvid' => $idArticle,
        'nvtitle' => $titre,
        'nvtext' => $texte
-
-
     ));
 
     return $modifLines;
