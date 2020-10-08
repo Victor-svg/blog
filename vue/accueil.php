@@ -1,11 +1,5 @@
-<?php $title = 'Mon blog'; ?>
+<?php $title = 'Accueil'; ?>
 <?php ob_start(); ?>
-
-<header>
-    <h1>Blog de Jean Forteroche</h1>
-    <h2>Billet simple pour l'Alaska</h2>
-	<?php require('vue/menu.php'); ?>
-</header>
 <section>
 	<div class="container">
 		<div class="row">
@@ -13,7 +7,7 @@
 		while ($data = $posts->fetch())
 		{
 ?>
-		<div class="art col-md-4">
+		<div class="art col-md-5">
 			<h3>
 				<?= $data['title']; ?>
 				<hr>

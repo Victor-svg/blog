@@ -1,11 +1,6 @@
 <?php $title = "Tous les Articles"; ?>
 <?php ob_start(); ?>
 
-<header>
-<h1>Vos Articles :</h1>
-<?php require('vue/menu.php'); ?>
-</header>
-
 <section>
 <div class="container">
       <h1>Tous vos Articles</h1>

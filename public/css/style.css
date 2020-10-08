@@ -22,6 +22,21 @@
     font-style: normal;
 
 }
+header 
+{
+    display: flex;
+    flex-direction: row;
+    position: fixed;
+    background-color: #00000078;
+    width: 100%;
+    justify-content: space-between;
+    margin: 0;
+}
+.navbar
+{
+    font-family: 'freebooter_scriptregular';
+    font-size: 25px;
+}
 body
 {
     font-family: 'latin_modern_roman_slante10Rg';
@@ -29,6 +44,7 @@ body
     background-size: cover;
     background-position: center;
     color: white;
+    padding-top: 150px;
 }
 h1
 {
@@ -37,40 +53,18 @@ h1
     margin-bottom: 0px;
     font-family: 'freebooter_scriptregular';
     text-shadow: 2px 2px 4px black;
-}
-a[href="index.php"]
-{
-    border-radius: 8px;
-    background: #092033;
-    border-bottom: 3px solid #d0ced3;
-    width: 150px;
-    text-decoration: none;
-    color: white;
-    font-size: 21px;
-    padding: 3px;
-    font-family: 'freebooter_scriptregular';
-    display: flex;
-}
-a[href="index.php"]:hover
-{
-    background: white;
-    color: #092033;
-    border-bottom: 3px solid  #092033;
+    padding-left: 18px;
+    padding-top: 19px;
 }
 h2
 {
     margin-top: -6px;
     font-size: 25px;
-    margin-left: 11%;
+    margin-left: 42%;
     font-family: 'freebooter_scriptregular';
     color: #f8f6f9;
     font-style: oblique;
     text-shadow: 2px 2px 4px black;
-}
-.bloc_news
-{
-    width: 96%;
-    text-align: center;
 }
 h3
 {
@@ -82,9 +76,52 @@ h3
     text-align: center;
     padding: 5%;
 }
+h4
+{
+    font-family: 'freebooter_scriptregular';
+    font-size: 35px;
+    text-shadow: 2px 6px 4px black;
+    text-align: center;
+}
+
+h5
+{
+    font-size: 44px;
+    font-family: 'freebooter_scriptregular';
+    color: #f8f6f9;
+    font-style: oblique;
+    text-shadow: 2px 2px 4px black;
+    margin: auto;
+    margin-bottom: 7px;
+    
+}
+.nav_tab
+{
+    text-align: center;
+    margin: auto;
+}
+.nav_tab .nav-link
+{
+    border-radius: 8px;
+    background: #4f412587;
+    border-bottom: 3px solid #d0ced3;
+    text-decoration: none;
+    color: white;
+    font-size: 25px;
+    padding: 11px;
+    font-family: 'freebooter_scriptregular';
+    margin: auto;
+    text-align: center;
+}
+/* Espace Articles */
+.bloc_news
+{
+    width: 96%;
+    text-align: center;
+}
 .art
 {
-    background-color: #013d6f91;
+    background-color:#4f412587;
     color: #f8f6f9;
     font-size: 18px;
     margin-bottom: 3%;
@@ -95,13 +132,8 @@ h3
     flex-direction: column;
     border-top-right-radius: 2%;
     border-top-left-radius: 2%;
-}
-header
-{
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    margin: 1%;
+    position: unset;
+    margin-top: 10%;
 }
 .btnArt 
 {
@@ -119,11 +151,13 @@ header
     color: #041725;
     text-decoration: none;
 }
+/* Espace commentaires */
+/*  Formulaire commentaires */
 .spaceCom
 {
-    color: #a1948e;
+    color: white;
     font-family: 'latin_modern_roman_slante10Rg';
-    background-color: #163e61eb;
+    background-color: #4f412587;
     padding-top: 10px;
     padding-bottom: 10px;
     font-size: 17px;
@@ -134,7 +168,7 @@ header
 }
 .spaceCom h2
 {
-    color: #a1948e;
+    color: white;
     font-size: 30px;
     text-shadow: 2px 2px 4px #dee2e663;
     margin-left: 0;
@@ -147,10 +181,13 @@ header
 {
     width: 88%;
 }
+/* Zone des commentaires publiés  */
 .comZone
 {
-    background-color: #163e6175;
-    color: white;
+    background-color: #907a52ad;
+    color: #ffffff;
+    border-radius: 10px;
+    font-weight: bolder;
 }
 input[type=submit]
 {
@@ -171,37 +208,14 @@ input[type=submit]:hover
 .addCom
 {
     margin: auto;
-}
-.dropdown
-{
-    text-align: right;
-    border-radius: 8px;
-    background: #092033;
-    border-bottom: 3px solid #d0ced3;
-    width: 150px;
-    text-decoration: none;
-    color: white;
-    font-size: 21px;
-    padding: 3px;
-    font-family: 'freebooter_scriptregular';
-
-}
-.dropdown-toggle
-{
-    width: 100%;
-    color: white;
-}
-.dropdown-toggle:hover
-{
-    width: 100%;
-    color: white;
-}
+} 
+/* Formulaire de connexion admin */
 .conecForm
 {
     margin: auto;
-    color: #a1948e;
+    color: white;
     font-family: 'latin_modern_roman_slante10Rg';
-    background-color: #1a3b6694;
+    background-color:#4f412587;
     padding-top: 10px;
     padding-bottom: 10px;
     font-size: 17px;
@@ -209,33 +223,9 @@ input[type=submit]:hover
     border-radius: 5%;
     box-shadow: 0 0 11px 9px #fdfcfc;
     text-align: center;
+    margin-top: 8%;
+    width: 90%;
 
-}
-h4
-{
-    font-family: 'freebooter_scriptregular';
-    font-size: 35px;
-    text-shadow: 2px 6px 4px black;
-    text-align: center;
-}
-.nav_tab
-{
-    text-align: center;
-    margin: auto;
-}
-.nav-link
-{
-    border-radius: 8px;
-    background: #092033;
-    border-bottom: 3px solid #d0ced3;
-    /*width: 401px; */
-    text-decoration: none;
-    color: white;
-    font-size: 21px;
-    padding: 11px;
-    font-family: 'freebooter_scriptregular';
-    margin: auto;
-    text-align: center;
 }
 /* Page voir les Articles */
 .tabVoirArt
@@ -246,10 +236,10 @@ tr
 {
     text-align: center;
 }
-/* Page voir les articles */
+/* Page Ajouter un article */
 .ajouter
 {
-    background-color: #bbbbbdcf;
+    background-color: #654d298c;
     margin: auto;
     text-align: center;
     height: 100%;
@@ -270,8 +260,7 @@ tr
     font-size: 45px;
     color: black;
 }
-
-/* Gestion des coms */
+/* Gestion des commentaires */
 #report
 {       
     border: none;
@@ -301,4 +290,19 @@ hr
 .delete
 {
     color: orangered;
+}
+
+/* responsive derniers détails */
+@media (max-width: 1130px) {
+    h1 {
+      display: none;
+    }
+    h2 {
+        padding-top: 10px;
+    }
+  }
+  @media (max-width: 780px) {
+    h1, h2 {
+      display: none;
+    }
 }

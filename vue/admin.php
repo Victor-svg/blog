@@ -2,12 +2,6 @@
 <?php 
   ob_start(); 
 ?>
-
-<header>
-<h1>Page Administrateur</h1>
-<?php require('vue/menu.php'); ?>
-</header>
-
 <section>
 <h4>
     <?php echo 'Bienvenu sur votre Tableau de Bord Monsieur ' . $_SESSION['pseudo'];

@@ -1,11 +1,6 @@
 <?php $title = htmlspecialchars($post['title']); ?>
 
 <?php ob_start(); ?>
-<header>
-<?php require('vue/menu.php'); ?>
-    <h1>Mes Articles !</h1>
-    <p><a href="index.php" class="col-sm-4 col-md-4 col-lg-3">Liste des Articles</a></p>
-</header>
 <div class="art mx-auto col-md-5">
     <h3>
         <?= $post['title']; ?>

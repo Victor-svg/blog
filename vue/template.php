@@ -13,7 +13,14 @@
         <script src="https://kit.fontawesome.com/d01f09f4e7.js" crossorigin="anonymous"></script>
         
     </head>
-        
+        <header class="navbar fixed-top col-sm-12">
+            <div class="title">
+                <h1> Blog de Jean Forteroche </h1>
+                <h2> Billet Simple pour l'Alaska </h2>
+            </div>
+            <h5> <?= $title ?> </h5>
+                <?php require('vue/menu.php'); ?>
+        </header>
     <body>
         <?= $content ?>
     </body>
