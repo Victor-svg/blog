@@ -21,13 +21,6 @@
     });
     </script>
 
-<header>
-<h1>Ajouter vos Articles</h1>
-<?php require('vue/menu.php'); ?>
-</header>
-
-
-
 <section id="addArt">
     <div class="ajouter col-sm-6 col-md-6 col-lg-6">
         <h2> Ajouter un Article </h2>

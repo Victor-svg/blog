@@ -1,7 +1,6 @@
 <?php $title = 'Page Erreur'; ?>
 <?php ob_start(); ?>
 <header>
-    <?php require('vue/menu.php'); ?>
         <h1> <?php echo $errorMessage; ?> </br>
             <a href="index.php?"> <i class="far fa-arrow-alt-circle-right"></i>  
                 Revenir à la page d'Accueil      

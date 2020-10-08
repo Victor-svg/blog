@@ -1,10 +1,5 @@
-<?php $title = "Page de gestion des Articles"; ?>
+<?php $title = "Page de gestion des Commentaires"; ?>
 <?php ob_start(); ?>
-
-<header>
-<h1>Page de gestion des commentaires</h1>
-<?php require('vue/menu.php'); ?>
-</header>
 
 <section>
 <div class="container">

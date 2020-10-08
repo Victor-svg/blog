@@ -21,10 +21,6 @@
 
     });
     </script>
-<header>
-    <?php require('vue/menu.php'); ?>
-    <h1> Modifier vos Article </h1>
-</header>
 
 <section id="addArt">
         
