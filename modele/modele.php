@@ -1,4 +1,5 @@
 <?php
+// connexion à la base de donnée
 function dbConnect()
 {
     try
@@ -14,7 +15,7 @@ function dbConnect()
         die('Erreur : '.$e->getMessage());
     }
 }
-
+// Requete pour sélectionner les Articles
 function getPosts()
 {
     $db = dbConnect();
@@ -22,7 +23,7 @@ function getPosts()
 
     return $req;
 }
-
+// Renvoyer Un Article suivant son ID ( page Post )
 function getPost($idArticle)
 {
     $idArticle = intval($idArticle);
@@ -33,6 +34,7 @@ function getPost($idArticle)
 
     return $post;
 }
+// Recuperer les commentaires suivant l'ID de l'article
 function getComments($idArticle)
 {
     $db = dbConnect();
@@ -41,7 +43,7 @@ function getComments($idArticle)
 
     return $comments;
 }
-
+// Fonction pour Poster un commentaire
 function postComment($idArticle, $auteur, $contenu)
 {
     $db = dbConnect();
@@ -50,7 +52,15 @@ function postComment($idArticle, $auteur, $contenu)
 
     return $affectedLines;
 }
-
+// fonction pour signaler un Commentaire
+function reportCom($id)
+{
+    $db = dbConnect();
+    $report = $db->prepare('UPDATE commentaires SET report = report+1 WHERE id = ?');
+    $affected = $report->execute(array($id));
+    
+    return $affected;
+}
 // fonctions admin
 function analyseUser()
 {
@@ -131,15 +141,3 @@ function getCom()
 
     return $comments;
 }
-// fonction report Commentaire
-function reportCom($id)
-{
-    $db = dbConnect();
-    $report = $db->prepare('UPDATE commentaires SET report = report+1 WHERE id = ?');
-    $affected = $report->execute(array($id));
-    
-    return $affected;
-
-}
-
-
