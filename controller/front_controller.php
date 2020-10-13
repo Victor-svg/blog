@@ -1,14 +1,14 @@
 <?php
 
 require('modele/modele.php');
-
+// voir tous les Articles
 function listPosts()
 {
     $posts = getPosts();
 
     require('vue/accueil.php');
 }
-
+// Page pour voir UN Article
 function post()
 {   
     $post = getPost($_GET['id']);
@@ -28,21 +28,21 @@ function addComment($idArticle, $auteur, $contenu)
         header('Location: index.php?action=post&id=' . $idArticle);
     }
 }
-// vue pour voir tous les articles
+// vue Admin pour voir la page tous les articles
 function tabPosts()
 {
     $posts = getPosts();
 
     require('vue/admin/voirArt.php');
 }
-// vue gestion des commentaires
+// vue Admin gestion des commentaires
 function tabCom()
 {
     $comments = getCom();
 
     require('vue/admin/gestCom.php');
 }
-// vue pour la modif d article
+// vue Admin pour la modif d article
 function frontModif()
 {
         $post = getPost($_GET['id']);
