@@ -157,7 +157,7 @@ try {
         // deconnexion 
         elseif ($_GET['action'] == 'deco') {
             if (isset($_SESSION['id']) AND isset($_SESSION['pseudo'])) {
-                deco();
+                destroy();
             header('Location: http://localhost/blog_%C3%A9crivain/index.php?');
             exit();
             }
