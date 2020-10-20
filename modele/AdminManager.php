@@ -1,4 +1,5 @@
 <?php
+
 require_once('modele/Manager.php');
 
 class AdminManager extends Manager
@@ -10,8 +11,8 @@ class AdminManager extends Manager
         $reqUser = $db->query('SELECT id, email, pass FROM membres');
         
         return $reqUser;
-    }
-    // fonction log admin
+    }    
+    // Fonction log admin
     public function getUser($email, $pass)
     {
         $db = $this->dbConnect();
@@ -30,7 +31,7 @@ class AdminManager extends Manager
             return false;
         }
     }
-    // fonction pour ajouter un article
+    // fonction ajouter un Article
     public function addArticle($idArticle, $titre, $texte)
     {
         $db = $this->dbConnect();
@@ -38,6 +39,7 @@ class AdminManager extends Manager
         $add = $req->execute(array($idArticle, $titre, $texte));
 
         return $add;
+
     }
     // fonction pour modifier article
     public function modArt($idArticle, $titre, $texte)
@@ -50,7 +52,6 @@ class AdminManager extends Manager
         'nvtitle' => $titre,
         'nvtext' => $texte
         ));
-
         return $modifLines;
     }
     // fonction delete article

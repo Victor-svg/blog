@@ -28,6 +28,7 @@ function addPost($idArticle, $titre, $texte)
     }
     else {
         header('Location: index.php?action=voirArt.php');
+        exit;
     }
 }
 // Modifier un article
@@ -41,6 +42,7 @@ function modifArt($idArticle, $titre, $texte)
     }
     else {
         header('Location: index.php?action=post&id=' . $idArticle);
+        exit;
     }
 }
 // supprimer un article
@@ -52,8 +54,9 @@ function deletArt()
         throw new Exception('Impossible de supprimer cet Article !');
     }
     else {
-       echo "Article supprimé !";
         header('Location: index.php?action=voirArt.php');
+        echo "Article supprimé !";
+        exit;
     }
 }
 // supprimer un commentaire
@@ -65,8 +68,9 @@ function deletCom()
         throw new Exception('Impossible de supprimer ce commentaire !');
     }
     else {
-        echo "Commentaire supprimé !";
         header('Location: index.php?action=gestCom.php');
+        echo "Commentaire supprimé !";
+        exit;
     }
 }
 // vue Admin gestion des commentaires
@@ -97,4 +101,6 @@ function tabPosts()
 function destroy()
 {
     $deco = session_destroy();
+    header('Location: index.php?');
+        exit();   
 }

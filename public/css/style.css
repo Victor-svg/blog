@@ -91,8 +91,8 @@ h5
     color: #f8f6f9;
     font-style: oblique;
     text-shadow: 2px 2px 4px black;
-    margin: auto;
     margin-bottom: 7px;
+    margin-right: 12%;
     
 }
 .nav_tab
@@ -304,5 +304,8 @@ hr
   @media (max-width: 1060px) {
     h1, h2 {
       display: none;
+    }
+    h5 {
+        margin: auto;
     }
 }

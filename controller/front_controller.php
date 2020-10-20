@@ -36,6 +36,7 @@ function addComment($idArticle, $auteur, $contenu)
     }
     else {
         header('Location: index.php?action=post&id=' . $idArticle);
+        exit;
     }
 }
 // Report commentaire
@@ -48,7 +49,7 @@ function addReport($id)
         throw new Exception('Impossible de signaler !');
     }
     else {
-        header('Location: http://localhost/blog_%C3%A9crivain/index.php?');
+        header('Location: index.php?');
         exit();      
     }
 }
