@@ -1,52 +1,55 @@
 <?php
 
-require('modele/modele.php');
+// Chargement des classes
+require_once('modele/PostManager.php');
+require_once('modele/CommentManager.php');
+require_once('modele/AdminManager.php');
+
 // voir tous les Articles
 function listPosts()
 {
-    $posts = getPosts();
+    $postManager = new PostManager();
+    $posts = $postManager->getPosts();
 
     require('vue/accueil.php');
 }
 // Page pour voir UN Article
 function post()
 {   
-    $post = getPost($_GET['id']);
-    $comments = getComments($_GET['id']);
+    $postManager = new PostManager();
+    $commentManager = new CommentManager();
+
+    $post = $postManager->getPost($_GET['id']);
+    $comments = $commentManager->getComments($_GET['id']);
 
     require('vue/post.php');
 }
 // fonction pour ajouter les commentaires
 function addComment($idArticle, $auteur, $contenu)
 {
-    $affectedLines = postComment($idArticle, $auteur, $contenu);
+    $commentManager = new CommentManager();
+
+    $affectedLines = $commentManager->postComment($idArticle, $auteur, $contenu);
 
     if ($affectedLines === false) {
         throw new Exception('Impossible d\'ajouter le commentaire !');
     }
     else {
         header('Location: index.php?action=post&id=' . $idArticle);
+        exit;
     }
 }
-// vue Admin pour voir la page tous les articles
-function tabPosts()
+// Report commentaire
+function addReport($id)
 {
-    $posts = getPosts();
+    $commentManager = new CommentManager();
+    $addRep = $commentManager->reportCom($_GET['id']);
 
-    require('vue/admin/voirArt.php');
+    if ($addRep === false) {
+        throw new Exception('Impossible de signaler !');
+    }
+    else {
+        header('Location: index.php?');
+        exit();      
+    }
 }
-// vue Admin gestion des commentaires
-function tabCom()
-{
-    $comments = getCom();
-
-    require('vue/admin/gestCom.php');
-}
-// vue Admin pour la modif d article
-function frontModif()
-{
-        $post = getPost($_GET['id']);
-        require('vue/admin/modArt.php');
-}
-
-

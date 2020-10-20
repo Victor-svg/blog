@@ -16,13 +16,13 @@
     <form action="index.php?action=addComment&amp;id=<?= $post['id'] ?>" method="post">
         <div class="form-group">
             <label for="auteur">Auteur</label> <br />
-            <input type="text" class="form-control-sm" id="auteur" name="auteur" />
+            <input type="text" class="form-control-sm" id="auteur" name="auteur" required />
         </div>
         <div class="form-group">
             <label for="contenu">Commentaire</label><br />
-            <textarea id="contenu" class="form-control-md" name="contenu"></textarea>
+            <textarea id="contenu" class="form-control-md" name="contenu" required ></textarea>
         </div>
-            <input type="submit" onclick="return confirm('Publier ?')"/>
+            <input type="submit" onclick="return confirm('Publier ?')" />
         </div>
     </form>
 </div>

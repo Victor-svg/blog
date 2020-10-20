@@ -24,7 +24,7 @@ try {
                     addComment($_GET['id'], $_POST['auteur'], $_POST['contenu']);
                 }
                 else {
-                    throw new Exception('Erreur : Tous les champs ne sont pas remplis !');
+                    throw new Exception('Erreur : Tous les champs du ne sont pas remplis !');
                 }
             }
             else {
@@ -59,9 +59,9 @@ try {
         
         // page Admin
         elseif ($_GET['action'] == 'admin') {
-            $email = $_POST["email"];
-            $pass = $_POST["pass"];
-            connect($email, $pass);
+                $email = $_POST["email"];
+                $pass = $_POST["pass"]; 
+                connect($email, $pass);
         }
         // acces page Admin via session
         elseif ($_GET['action'] == 'board') {
@@ -157,8 +157,8 @@ try {
         // deconnexion 
         elseif ($_GET['action'] == 'deco') {
             if (isset($_SESSION['id']) AND isset($_SESSION['pseudo'])) {
-                deco();
-            header('Location: http://localhost/blog_%C3%A9crivain/index.php?');
+                destroy();
+            header('Location: index.php?');
             exit();
             }
         }
